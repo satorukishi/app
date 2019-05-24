@@ -1,46 +1,63 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
-        <!--
-        Customize this policy to fit your own app's needs. For more guidance, see:
-            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
-        Some notes:
-            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-                * Enable inline JS: add 'unsafe-inline' to default-src
-        -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" href="css/material.min.css">
+        <link rel="stylesheet" href="css/material-icons.css">
         <title>Login</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Aplicativo</h1>
-            <a href="cadastro.html">Criar conta</a>
+        <div class="app mdl-layout__container">
+            <header class="mdl-layout__header mdl-layout__header--waterfall">
+                <h1>Dispositivo</h1>
+            </header>
+            <main class="mdl-layout__content">
+                <div class="mdl-grid portfolio-max-width portfolio-contact">
+                    <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+                        <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Contact</h2>
+                        </div>
+                        <div class="mdl-card__media">
+                            <img class="article-image" src=" images/contact-image.jpg" border="0" alt="">
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            <p>
+                                Enim labore aliqua consequat ut quis ad occaecat aliquip incididunt. Sunt nulla eu enim irure enim nostrud aliqua consectetur ad consectetur sunt ullamco officia. Ex officia laborum et consequat duis.
+                            </p>
+                            <p>
+                                Excepteur reprehenderit sint exercitation ipsum consequat qui sit id velit elit. Velit anim eiusmod labore sit amet.
+                            </p>
+                            <form action="#" class="">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                    <input class="mdl-textfield__input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="text" id="Email">
+                                    <label class="mdl-textfield__label" for="Email">Email...</label>
+                                    <span class="mdl-textfield__error">e-mail inválido</span>
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                    <input class="mdl-textfield__input" type="password" id="Password">
+                                    <label class="mdl-textfield__label" for="Password">Password...</label>
+                                </div>
+                                <p>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit" data-upgraded=",MaterialButton,MaterialRipple">
+                                        Entrar
+                                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mdl-mini-footer">
+                    <ul class="mdl-mini-footer__link-list">
+                        <li><a href="cadastro.html">Novo por aqui? Crie sua conta agora</a></li>
+                    </ul>
+                </footer>
+            </main>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/material.min.js"></script>
     </body>
 </html>
